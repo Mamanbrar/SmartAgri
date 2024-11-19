@@ -1,0 +1,414 @@
+/* Header container with Flexbox for horizontal alignment */
+.header .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Styling the logo container */
+.header .logo {
+  display: flex;
+  align-items: center;
+ 
+}
+
+img.logo {
+  background-color: transparent;
+}
+
+.header .logo img {
+  max-height: 170px; /* Adjust size as needed */
+  margin-right: 10px;
+  max-width: 170px;
+}
+
+/* Navigation menu styling */
+.navmenu {
+  background-color: #f8f9fa; /* Light background color */
+  font-size: 18px;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for effect */
+}
+
+.navmenu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navmenu li {
+  margin-left: 25px; /* Adjust spacing between nav items */
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: #228b22; /* Replace with your desired color */
+  font-size: 20px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.navmenu a:hover {
+  color: #22438b; /* Replace with your desired hover color */
+}
+
+/* Hide the dropdown content by default */
+.navmenu .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  min-width: 200px; /* Adjust width as needed */
+}
+
+/* Show the dropdown content on hover */
+.navmenu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style individual dropdown links */
+.navmenu .dropdown .dropdown-content li a {
+  color: #228b22;
+  padding: 8px 12px;
+  display: block;
+  text-decoration: none;
+}
+
+.navmenu .dropdown .dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* For mobile responsiveness */
+@media (max-width: 991px) {
+  .container-fluid {
+      flex-direction: column;
+  }
+  
+  .navmenu ul {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+  }
+
+  /* When mobile navigation is active */
+  .mobile-nav-active .navmenu ul {
+      display: flex;
+  }
+}
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.hero .carousel-item {
+  position: relative;
+  height: 100vh;
+}
+
+.hero .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  opacity: 0.7; /* Slight opacity to allow the text to stand out */
+}
+
+.hero .carousel-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 80%; /* Limit the width of the text */
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow for readability */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Carousel Control Buttons */
+.carousel-control-prev, .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h2 {
+      font-size: 2rem; /* Adjust for mobile */
+  }
+
+  .hero p {
+      font-size: 1rem; /* Adjust for mobile */
+  }
+
+  .hero .carousel-container {
+      padding: 10px;
+  }
+}
+
+/* Services Section Styling */
+.service-item-link {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Keep the text color from the card */
+}
+
+.services {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.services .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.services p {
+  font-size: 18px;
+  color: #555;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  height: 250px; /* Make all cards the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item-icon i {
+  font-size: 40px;
+  color: #34db4a;
+  margin-bottom: 20px;
+}
+
+.service-item-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-item-content p {
+  font-size: 16px;
+  color: #555;
+  flex-grow: 1; /* Ensure description text takes up available space */
+}
+
+/* Grid Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-lg-3, .col-md-6 {
+  width: 23%;  /* Adjust for 4 items per row */
+  margin-bottom: 30px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+@media (max-width: 991px) {
+  .col-lg-3 {
+      width: 48%; /* For medium screen, show 2 items per row */
+  }
+}
+
+@media (max-width: 767px) {
+  .col-lg-3, .col-md-6 {
+      width: 100%; /* For mobile, show 1 item per row */
+  }
+}
+
+
+#footer {
+  /* Footer Styling */
+  background-color: #228b22; /* Transparent green */
+  color: #fff;
+  padding: 20px 20px; /* Add padding to the footer */
+  font-family: Arial, sans-serif; /* Ensure readability with a simple font */
+}
+
+.footer-about p, .footer-links p, .footer-services p {
+  font-size: 18px; /* Slightly larger font size for readability */
+  margin: 5px 2px; /* Added margin for spacing */
+}
+
+.footer-about .sitename {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.footer-links h4, .footer-services h4, .footer-social h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px; /* Space below headings */
+  color: #f1f1f1;
+  
+}
+
+.footer-links ul, .footer-services ul {
+  
+  list-style: circle;
+  
+}
+
+.footer-links ul li, .footer-services ul li {
+  
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-links ul li a, .footer-services ul li a {
+  color: #ffffff;
+  font-size: 18px; /* Adjusted for better readability */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover, .footer-services ul li a:hover {
+  color: #dddddd;
+}
+
+/* Flexbox Layout for Footer */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-about, .footer-links, .footer-services, .footer-social {
+  flex: 1;
+  padding: 0 78px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  max-width: 40%; /* Set max width for each section */
+}
+
+.footer-social .social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 32px; /* Larger size for social icons */
+  color: #ffffff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social .social-links a:hover {
+  color: #57a5ff; /* Hover color */
+  transform: scale(1.1);
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 992px) {
+  .footer-about, .footer-links, .footer-services, .footer-social {
+    flex: 1 1 100%; /* Stack sections vertically */
+    max-width: 100%; /* Allow full width */
+    text-align: left; /* Align text left */
+  }
+
+  .footer-about .sitename {
+    font-size: 22px; /* Adjust site name font size */
+  }
+
+  .footer-links ul li a, .footer-services ul li a {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .footer-social .social-links a {
+    font-size: 28px; /* Adjust icon size for mobile */
+  }
+}
+
+/* For very small screens (mobile phones) */
+@media (max-width: 480px) {
+  #footer {
+    padding: 20px 10px; /* Reduced padding */
+  }
+
+  .footer-about .sitename {
+    font-size: 20px; /* Even smaller site name */
+  }
+
+  .footer-links ul li a, .footer-services ul li a {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .footer-social .social-links a {
+    font-size: 24px; /* Smaller social icons */
+  }
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer-about, .footer-links, .footer-social {
+      text-align: center;
+  }
+}
+
+/* Styling for the number inside service-item */
+.content .service-item .number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50; /* Adjust color as needed */
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Remove any stray .number classes in unexpected places */
+.navbar .number, .logo .number {
+  display: none;
+}

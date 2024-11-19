@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AgriCulture</title>
+    <link href="{{ url_for('static', filename='css/about.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AgriCulture">
+            </div>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact')}}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="left">
+                <h3>Our Vision</h3>
+                <p>At AgriCulture, we believe in transforming traditional farming into a smart, sustainable practice using cutting-edge technology. Our mission is to empower farmers worldwide with advanced AI solutions for crop monitoring, water management, and pest detection.</p>
+            </div>
+            <div class="right">
+                <h3>Who We Are</h3>
+                <p>We are a team of passionate agritech professionals, engineers, and researchers working towards revolutionizing agriculture with smart technologies. We focus on building solutions that benefit farmers by improving crop health, reducing waste, and enhancing overall productivity.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+        
+        <div class="team">
+            <h3>Meet Our Team</h3>
+            <div class="team-cards">
+                <div class="team-card">
+                    <!-- <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Team Member 1"> -->
+                    <h4>Kamalveer Kaur</h4>
+                    <p>Web Developer</p>
+                </div>
+                <div class="team-card">
+                    <!-- <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Team Member 2"> -->
+                    <h4>Harpreet Singh</h4>
+                    <p>Python Developer</p>
+                </div>
+                <div class="team-card">
+                    <!-- <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Team Member 3"> -->
+                    <h4>Mamandeep Singh</h4>
+                    <p>Python Developer</p>
+                </div>
+
+                <div class="team-card">
+                    <!-- <img src="{{ url_for('static', filename='images/team3.jpg') }}" alt="Team Member 3"> -->
+                    <h4>Karan Gupta</h4>
+                    <p>Researcher</p>
+                </div>
+
+                <div class="team-card">
+                    <!-- <img src="{{ url_for('static', filename='images/team4.jpg') }}" alt="Team Member 4"> -->
+                    <h4>Ranveer Kumar</h4>
+                    <p>Researcher</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AgriCulture. All rights reserved.</p>
+    </footer>
+</body>
+</html>

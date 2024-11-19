@@ -1,0 +1,175 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #4d4d4d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure the page takes full viewport height */
+    background-image: url("{{ url_for('static', filename='images/bg.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    position: fixed; /* Make header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo h1 {
+    font-size: 2rem;
+    color: #228B22;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #228B22;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #228b22;
+}
+
+/* Main Content Styles */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 100px; /* Adjusted space to avoid overlap with the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 2px solid #228B22;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+select:hover, select:focus {
+    border-color: #228b22;
+    background-color: #e8f5e9;
+}
+
+.crop-info {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #228B22; /* Set text color to match the logo color */
+}
+
+.crop-info h2 {
+    color: #228b22; /* Set the heading color to match the logo color */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.crop-info p {
+    font-size: 1.1rem;
+    color: #228b22; /* Set the paragraph text color to match the logo color */
+    margin-bottom: 10px;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Centering the Select Crop Box */
+.select-crop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will center it vertically */
+  }
+  
+  
+ 
+  /* Optional: If the content section pushes the footer up, ensure there's no overflow */
+  .main-content {
+    flex: 1;
+  }
+  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header nav .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+}

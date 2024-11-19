@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - AgriCulture</title>
+     <link href="{{ url_for('static', filename='css/Service.css') }}" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AgriCulture">
+
+            </div>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                
+                <h3>Disease Prediction</h3>
+                <p>Using advanced AI to predict and prevent plant diseases, ensuring healthier crops.</p>
+                <a href="{{ url_for('Disease') }}">Learn More</a>
+            </div>
+            <div class="card">
+                
+                <h3 class="service-heading">Agriculture Optimization</h3>
+                <p>
+                  Real-time optimization of agricultural processes to enhance crop yield and efficiency.
+                </p>
+                <a href="{{ url_for('opti') }}">Learn More</a>
+            </div>
+            <div class="card">
+                
+                <h3>Water Automation</h3>
+                <p>Smart irrigation systems to optimize water usage and enhance crop growth.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="card">
+                
+                <h3 class="service-heading">Monthly Calendar</h3>
+              <p>
+                Stay on track with a comprehensive monthly farming calendar to plan your activities.
+              </p>
+                <a href="{{ url_for('calender') }}">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AgriCulture. All rights reserved.</p>
+    </footer>
+</body>
+</html>

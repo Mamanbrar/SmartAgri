@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('{{ url_for("static", filename="img/agri.jpg") }}') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding-top: 80px; /* Adjusted for header spacing */
+        }
+
+        /* Header Styles */
+        header {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            color: #3a5f0b;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #228b22;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #56ab2f;
+        }
+
+        /* Form and Content Styles */
+        h1 {
+            font-size: 2.5em;
+            color: #228b22; /* Darker green */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+            margin-top: 0;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px; /* Space below header */
+            animation: slideUp 0.8s ease-out;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            font-size: 1em;
+            margin-bottom: 15px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #56ab2f;
+            color: white;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2e4d28;
+        }
+
+        /* Footer Styles */
+        footer {
+            width: 100%;
+            background-color: #228b22;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Disease Prediction</title>
+</head>
+<body>
+    <!-- Header with Logo and Navigation Links -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <h1>Crop Disease Prediction</h1>
+    <form action="{{ url_for('Disease') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload and Predict</button>
+    </form>
+
+    {% if disease_name %}
+        <h2>Prediction: {{ disease_name }}</h2>
+        <img src="{{ url_for('static', filename=image_path.split('/')[-1]) }}" alt="Uploaded Image" width="300">
+    {% endif %}
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Crop Disease Prediction. All rights reserved.
+    </footer>
+</body>
+</html>

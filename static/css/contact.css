@@ -1,0 +1,164 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8f0;
+    color: #4d4d4d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Header Section */
+header {
+    background-color: #fff;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    color: #228B22;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #228B22;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #006400;
+}
+
+/* Contact Form Section */
+.contact-container {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto; /* Centering the container */
+    flex: 1; /* Ensures that content takes up remaining space */
+}
+
+.contact-form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: #228B22;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+}
+
+.form-container {
+    flex: 1;
+}
+
+.form-container h3 {
+    font-size: 1.8rem;
+    color: #228B22;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: #4d4d4d;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #228B22;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline-color: #228B22;
+}
+
+.button-group {
+    text-align: center;
+}
+
+button.btn {
+    background-color: #228B22;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: #006400;
+}
+
+/* Footer Section */
+footer {
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

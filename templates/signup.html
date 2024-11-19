@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AgriCulture</title>
+    <link href="{{ url_for('static', filename='css/sup.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AgriCulture Logo">
+               
+            </div>
+        </header>
+
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="alert-list">
+                {% for category, message in messages %}
+                    <li class="alert alert-{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+            <form action="{{ url_for('signin') }}" method="POST">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn">Sign Up</button>
+                </div>
+                <p class="signin-link">Already have an account? <a href="{{ url_for('signin') }}">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

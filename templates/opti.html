@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Production Optimization</title>
+    <style>
+    body {
+        background-image: url(https://img.freepik.com/premium-photo/spring-grain-concept-agriculture-healthy-eating-organic-food-generative-ai_58409-32489.jpg?w=2000);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Header and Footer */
+     footer {
+        background-color: #228b22;
+        color: white;
+        padding: 15px;
+    }
+    header {
+            width: 100%;       
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            color: #3a5f0b;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #228b22;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #56ab2f;
+        }
+
+    .centered-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 140px); /* Adjust height to prevent overlap with header and footer */
+        padding: 20px;
+    }
+
+    .form {
+        max-width: 500px;
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
+
+    .form input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        padding-right: 0;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #228b22;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right; /* Align button to the right */
+    }
+
+    .btn:hover {
+        background-color: #196619;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form Section -->
+    <div class="centered-container">
+        <form class="form" action="http://127.0.0.1:5000/prediction" target="_main" method="post">
+            <h2>Agriculture Production Optimization</h2>
+            <ol>
+                <li>Nitrogen level</li>
+                <input type="number" placeholder="Enter value" name="Nitrogen">
+                <li>Phosphorous level</li>
+                <input type="number" placeholder="Enter value" name="Phosphorous">
+                <li>Potassium level</li>
+                <input type="number" placeholder="Enter value" name="Pottasium">
+                <li>Temperature level</li>
+                <input type="number" placeholder="Enter value" name="Temperature">
+                <li>Humidity level</li>
+                <input type="number" placeholder="Enter value" name="Humidity">
+                <li>PH level</li>
+                <input type="number" placeholder="Enter value" name="PH">
+                <li>Rainfall level</li>
+                <input type="number" placeholder="Enter value" name="Rainfall">
+            </ol>
+            <input type="submit" name="submit" value="Submit" class="btn">
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Agriculture Production Optimization. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AgriCulture</title>
+    <link href="{{ url_for('static', filename='css/contact.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AgriCulture Logo">
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Contact Form Section -->
+    <div class="contact-container">
+        <section class="contact-form-section">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We would love to hear from you! If you have any questions or feedback, feel free to reach out to us.</p>
+                <div class="contact-details">
+                    <p><strong>Phone:</strong> 8264380401</p>
+                    <p><strong>Email:</strong> support@agriculture.com</p>
+                    <p><strong>Address:</strong> Bathinda,Punjab</p>
+                </div>
+            </div>
+
+            <form action="{{ url_for('submit_contact') }}" method="POST">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </form>
+            
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 AgriCulture. All rights reserved.</p>
+    </footer>
+</body>
+</html>

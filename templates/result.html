@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitable Crop</title>
+    <style>
+    
+    .centered-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .background-container {
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    h1, h3 {
+        margin: 0;
+        /* color: goldenrod; */
+        color: rgb(255, 183, 0);
+    }
+
+    body {
+        background-image: url(https://wallpapers.com/images/hd/agriculture-wind-farm-m4dl8umnry01ed8u.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .btn-container {
+        margin-top: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="centered-container">
+       <div class="background-container">
+           <h1 style="font-size: 60px;"><b>Suitable Crop:</b></h1>
+           <h3><b>{{ output }}</b></h3>
+       </div>
+            <div class="btn-container">
+                <a href="http://127.0.0.1:5000/"  class="btn btn-md">Back</a>
+            </div>
+    </div>
+    
+</body>
+</html>

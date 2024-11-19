@@ -1,0 +1,159 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #4d4d4d;
+}
+
+header {
+    background-color: transparent;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo h1 {
+    font-size: 1.8rem;
+    color: #228B22;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #228B22;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #006400;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #2e8b57;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.left, .right {
+    width: 48%;
+}
+
+.left h3, .right h3 {
+    font-size: 1.8rem;
+    color: #228B22;
+    margin-bottom: 1rem;
+}
+
+.left p, .right p {
+    font-size: 1rem;
+    color: #6b8e23;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #228B22;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #006400;
+}
+
+/* Team Section */
+.team {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.team h3 {
+    font-size: 2rem;
+    color: #228B22;
+    margin-bottom: 2rem;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.team-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-card h4 {
+    font-size: 1.2rem;
+    color: #228B22;
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #6b8e23;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #228B22;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+  width: 100%;
+}
