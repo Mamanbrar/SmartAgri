@@ -256,4 +256,4 @@ def prediction():
 
 if __name__ == '__main__':
     init_db()  # Create the database and table if it doesn't exist
-    app.run(debug=True)
+    app.run()
